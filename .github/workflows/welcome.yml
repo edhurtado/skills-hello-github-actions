@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 # Third task to be created, adding a new step
     steps:
+      # GithubCLI command to add a new comment in a PR created
       - run: gh pr comment "$PR_URL" --body "Welcome to the repository!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
